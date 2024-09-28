@@ -99,7 +99,7 @@ const updateUser = (id, data) => {
             }
             const isDuplicate = await User.findOne({
                 email: data.email,
-                _id: { $ne: id }, // Loại trừ người dùng hiện tại đang được cập nhật
+                _id: { $ne: id }, 
               });
         
               if (isDuplicate) {
